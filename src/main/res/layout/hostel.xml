@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/profile_bg_color">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:fitsSystemWindows="true">
+
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/profile_bg_color"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextColor="@color/white"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="Hostel"
+            tools:layout_editor_absoluteX="-42dp"
+            tools:layout_editor_absoluteY="-203dp">
+
+
+            <ImageView
+                android:layout_width="213dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center|top|right"
+                android:layout_marginBottom="0.1dp"
+                android:background="@drawable/hstl"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:title="Hostel Name"
+                app:titleTextColor="@color/white"/>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="999dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout_bg"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp">
+
+
+            <TextView
+                android:id="@+id/hostel"
+                android:layout_width="230dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="48dp"
+                android:text="Hostel Name"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.657"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-4dp"
+                android:text="Hostel Address"
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.834"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hostel" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="44dp"
+                android:text="About"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.123"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+
+            <TextView
+                android:id="@+id/aboutDetails"
+                android:layout_width="401dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginRight="15dp"
+                android:text="The cattle hostel concept was initiated in December 2019 with an aim to create a clean and hygienic environment in the villages apart from helping landless farmers take up dairying as a sustainable livelihood and to safeguard the health of milch animals and improve the yield of milk.
+
+The one-stop common milch cattle home has facilities that include chaff cutting shed, dung long making unit, clinic with all facilities, a meeting hall for community, store room to enable farmers to store their dairy implements, security room equipped with CC cameras, milk collection centre, quarters for in house staff, dung collection pits and water troughs for cattle."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about"
+                app:layout_constraintVertical_bias="0.024" />
+
+
+
+
+            <TextView
+                android:id="@+id/gallery"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Gallery"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.117"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aboutDetails" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScroll"
+                android:layout_width="411dp"
+                android:layout_height="114dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gallery" >
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/i1" />
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/i2"/>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/admission"
+                android:layout_width="168dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="12dp"
+                android:text="Admission"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.117"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScroll" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:text="Total no of cattle "
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.192"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/admission" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-16dp"
+                android:text="Total no of cattle breed "
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.191"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-16dp"
+                android:text="Admission Fees"
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.191"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#facf5a"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_call_24"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="end|bottom" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

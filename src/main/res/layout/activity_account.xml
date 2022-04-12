@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/profile_bg_color">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:layout_anchor="@+id/toolbar"
+        app:layout_anchorGravity="center"
+        app:layout_collapseMode="pin">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/img"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp"
+            app:layout_collapseMode="parallax" />
+
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="300dp"
+            android:text=".@rohitkumar"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested"
+        android:layout_width="match_parent"
+        android:layout_height="726dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/profile_layout"
+        app:layout_anchor="@+id/nested"
+        app:layout_anchorGravity="center"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp">
+
+
+            <TextView
+                android:id="@+id/accountInfo"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="28dp"
+                android:text="Account Info"
+                android:textAlignment="viewStart"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/about"
+                android:layout_width="325dp"
+                android:layout_height="101dp"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/square"
+                android:hint="About Your Self"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.395"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/accountInfo" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Name"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/name"
+                app:layout_constraintEnd_toStartOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/about" />
+
+            <TextView
+                android:id="@+id/interName"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:text="Rohit Kumar"
+                android:layout_marginTop="-9dp"
+                android:textAlignment="viewStart"
+                android:textSize="21dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+            <TextView
+                android:id="@+id/interEmail"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Email"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interName" />
+
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="Rohitkumar@gmail.com"
+                android:textSize="21dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interEmail" />
+
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/email"
+                app:layout_constraintEnd_toStartOf="@+id/name"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+            <TextView
+                android:id="@+id/interMobile"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Mobile"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email" />
+
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-12dp"
+                android:textAlignment="viewStart"
+                android:text="123456789"
+                android:textSize="21dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interMobile" />
+
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/phone"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+            <TextView
+                android:id="@+id/interDOB"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="D.O.B"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobile" />
+
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="xx-xx-xxxx"
+                android:textSize="21dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interDOB" />
+
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/age"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+            <TextView
+                android:id="@+id/interAddress"
+                android:layout_width="88dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="12dp"
+                android:text="Address"
+                android:textAlignment="viewStart"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.232"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dob" />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="-13dp"
+                android:textAlignment="viewStart"
+                android:text="Intered address"
+                android:textSize="21dp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interAddress" />
+
+
+            <ImageView
+                android:layout_width="59dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/address"
+                app:layout_constraintEnd_toStartOf="@+id/interMobile"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/address"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="411dp"
+                android:layout_height="291dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tab_layout_1" />
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
